@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111827">
+  <meta name="description" content="MASTIVERSE — a playful board-game universe.">
+  <title>MASTIVERSE — Board Game Universe</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Mastiverse home"><span class="brand-mark">M</span><span>MASTIVERSE</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#games">Games</a><a href="#how-to-play">How to play</a><a href="#about">About</a>
+    </nav>
+    <button id="soundToggle" class="quiet-button" type="button" aria-pressed="false">Sound: Off</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">A LITTLE STRATEGY. A LOT OF CHAOS.</p>
+        <h1>Big moves.<br><span>Funny outcomes.</span></h1>
+        <p class="hero-description">A mobile-friendly board-game universe built around clever decisions, surprise twists, and good sportsmanship.</p>
+        <a class="primary-button" href="#games">Choose a game <span aria-hidden="true">→</span></a>
+        <div class="hero-stats"><div><strong>2</strong><span>Playable game modes</span></div><div><strong>1–2</strong><span>Local players</span></div><div><strong>0</strong><span>Pay-to-win boosts</span></div></div>
+      </div>
+      <div class="hero-art" aria-label="Decorative board game illustration">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="floating-piece piece-a">✦</div><div class="floating-piece piece-b">●</div><div class="floating-piece piece-c">◆</div>
+        <div class="mini-board">
+          <span></span><span class="tile portal">↗</span><span></span><span></span>
+          <span class="tile hot">✦</span><span class="tile player-blue">●</span><span></span><span class="tile portal">↙</span>
+          <span></span><span></span><span class="tile player-pink">●</span><span></span>
+          <span class="tile hot">!</span><span></span><span></span><span class="tile hot">✦</span>
+        </div>
+        <div class="art-caption"><span class="live-dot"></span> YOUR NEXT MOVE CHANGES EVERYTHING</div>
+      </div>
+    </section>
+
+    <section id="games" class="section">
+      <div class="section-heading"><div><p class="eyebrow">THE GAME SHELF</p><h2>Pick your kind of trouble.</h2></div><p>Learn in minutes. Keep discovering new tactics.</p></div>
+      <div class="game-grid">
+        <article class="game-card rift-card">
+          <div class="card-art rift-art"><div class="art-badge">STRATEGY</div><div class="rift-glyph">⌘</div><div class="art-orbit"></div></div>
+          <div class="card-content"><div class="card-title-row"><h3>Rift Realms</h3><span class="duration">10–15 min</span></div><p>Claim territory, use portals, and out-position your rival on a shifting grid.</p><div class="card-footer"><span class="player-label">1–2 players · Tactical</span><button class="play-button" type="button" data-game="rift">Play now <span>→</span></button></div></div>
+        </article>
+        <article class="game-card chaos-card">
+          <div class="card-art chaos-art"><div class="art-badge">PARTY TACTICS</div><div class="chaos-glyph">?!</div><div class="chaos-star star-one">✳</div><div class="chaos-star star-two">✦</div></div>
+          <div class="card-content"><div class="card-title-row"><h3>Happy Disaster</h3><span class="duration">5–8 min</span></div><p>Secretly choose a move, reveal together, and turn ridiculous hazards into opportunities.</p><div class="card-footer"><span class="player-label">1–2 players · Simultaneous</span><button class="play-button" type="button" data-game="happy">Play now <span>→</span></button></div></div>
+        </article>
+        <article class="game-card locked-card">
+          <div class="card-art future-art"><div class="art-badge">COMING LATER</div><div class="future-glyph">◎</div></div>
+          <div class="card-content"><div class="card-title-row"><h3>Echo Tactics</h3><span class="duration">Planned</span></div><p>Every move leaves an echo. Predict how the board remembers what you did.</p><div class="card-footer"><span class="player-label">Design module</span><span class="planned-label">Not playable yet</span></div></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="how-to-play" class="how-section">
+      <div><p class="eyebrow">QUICK START</p><h2>Easy to enter.<br>Hard to master.</h2><p class="muted">No account needed for local play. Pass the device to a friend, or try the solo practice mode.</p></div>
+      <div class="steps"><div class="step"><span>01</span><div><h3>Choose a board</h3><p>Pick a game and read the short rule summary.</p></div></div><div class="step"><span>02</span><div><h3>Make your move</h3><p>Tap highlighted spaces or choose your secret action.</p></div></div><div class="step"><span>03</span><div><h3>Enjoy the recap</h3><p>Wins matter. Clever moves and funny mishaps matter too.</p></div></div></div>
+    </section>
+
+    <section id="about" class="values-strip"><div><span class="value-icon">✦</span><strong>Respectful competition</strong><span>No personal insults or humiliating loss screens.</span></div><div><span class="value-icon">↻</span><strong>Rematch ready</strong><span>Try another strategy or switch games.</span></div><div><span class="value-icon">⌁</span><strong>Mobile first</strong><span>Touch-friendly controls for phones and tablets.</span></div></section>
+  </main>
+
+  <footer><a class="brand" href="#"><span class="brand-mark">M</span><span>MASTIVERSE</span></a><span>Play fair. Play clever. Laugh either way.</span><span>Starter release · v0.1</span></footer>
+
+  <dialog id="gameDialog" class="game-dialog">
+    <div class="dialog-header"><div><p class="eyebrow" id="dialogEyebrow">PLAY MASTIVERSE</p><h2 id="dialogTitle">Rift Realms</h2></div><button id="closeDialog" class="close-button" type="button" aria-label="Close game">×</button></div>
+    <div id="gameMount"></div>
+  </dialog>
+  <script>
+(() => {
+  "use strict";
+  const dialog = document.getElementById("gameDialog");
+  const mount = document.getElementById("gameMount");
+  const title = document.getElementById("dialogTitle");
+  const eyebrow = document.getElementById("dialogEyebrow");
+  const soundToggle = document.getElementById("soundToggle");
+  let soundOn = false;
+  let activeGame = null;
+
+  soundToggle.addEventListener("click", () => {
+    soundOn = !soundOn;
+    soundToggle.textContent = `Sound: ${soundOn ? "On" : "Off"}`;
+    soundToggle.setAttribute("aria-pressed", String(soundOn));
+  });
+  document.getElementById("closeDialog").addEventListener("click", () => dialog.close());
+  dialog.addEventListener("close", () => { mount.innerHTML = ""; activeGame = null; });
+
+  document.querySelectorAll("[data-game]").forEach(button => {
+    button.addEventListener("click", () => {
+      const game = button.dataset.game;
+      activeGame = game;
+      title.textContent = game === "rift" ? "Rift Realms" : "Happy Disaster";
+      eyebrow.textContent = game === "rift" ? "TERRITORY STRATEGY" : "SIMULTANEOUS PARTY TACTICS";
+      mount.innerHTML = game === "rift" ? riftMarkup() : happyMarkup();
+      if (!dialog.open) dialog.showModal();
+      if (game === "rift") initRift();
+      else initHappy();
+    });
+  });
+
+  function riftMarkup() {
+    return `<p class="game-intro">Claim more territory than your rival. On your turn, tap one of your pieces, then a highlighted adjacent tile. Portals connect opposite corners. The game ends after 20 turns or when neither player can move; most territory wins.</p>
+      <div class="game-controls"><button class="control-button primary" id="riftMode">Mode: Local 2-player</button><button class="control-button" id="riftReset">New match</button></div>
+      <div class="status-bar"><span id="riftStatus">Blue's turn</span><span>Turn <strong id="riftTurn">1</strong>/20</span></div>
+      <div id="riftBoard" class="board" role="group" aria-label="Rift Realms board"></div>
+      <div class="score-row"><div class="score-box"><span>Blue territory</span><strong id="riftBlueScore">2</strong></div><div class="score-box"><span>Pink territory</span><strong id="riftPinkScore">2</strong></div></div>
+      <p class="game-note">Rules: move one square orthogonally, or use a portal to move to its paired corner. Landing on a neutral tile claims it. Landing on an opponent tile is not allowed. In solo mode, Pink is controlled by a simple tactical AI.</p>
+      <div id="riftResult" class="result-log" hidden></div>`;
+  }
+  const riftStart = () => ({ board: Array(25).fill(0), current: 1, turn: 1, selected: null, mode: "local", over: false, log: "" });
+  let rift = null;
+  function initRift() {
+    rift = riftStart(); rift.board[0] = 1; rift.board[24] = 2; rift.board[4] = 1; rift.board[20] = 2;
+    document.getElementById("riftMode").onclick = () => { rift.mode = rift.mode === "local" ? "solo" : "local"; document.getElementById("riftMode").textContent = `Mode: ${rift.mode === "local" ? "Local 2-player" : "Solo vs AI"}`; drawRift(); };
+    document.getElementById("riftReset").onclick = initRift;
+    drawRift();
+  }
+  function neighbors(i) {
+    const r = Math.floor(i / 5), c = i % 5, out = [];
+    if (r > 0) out.push(i - 5); if (r < 4) out.push(i + 5);
+    if (c > 0) out.push(i - 1); if (c < 4) out.push(i + 1);
+    if (i === 0) out.push(24); if (i === 24) out.push(0); if (i === 4) out.push(20); if (i === 20) out.push(4);
+    return [...new Set(out)];
+  }
+  function legalRiftMoves(from, player) { return neighbors(from).filter(i => rift.board[i] !== player); }
+  function drawRift() {
+    const board = document.getElementById("riftBoard"); if (!board) return;
+    board.innerHTML = "";
+    rift.board.forEach((v, i) => {
+      const b = document.createElement("button"); b.type = "button"; b.className = "cell"; b.setAttribute("aria-label", `Tile ${i + 1}${v ? `, ${v === 1 ? "Blue" : "Pink"} piece` : ""}`);
+      if (i === 4 || i === 20) b.classList.add("portal-cell");
+      if (i === 12) b.classList.add("hazard-cell");
+      if (v === 1) { b.classList.add("p1"); b.textContent = "●"; }
+      else if (v === 2) { b.classList.add("p2"); b.textContent = "●"; }
+      else if (i === 4 || i === 20) b.textContent = "↗";
+      else if (i === 12) b.textContent = "✦";
+      if (rift.selected === i) b.classList.add("legal");
+      if (rift.selected !== null && legalRiftMoves(rift.selected, rift.current).includes(i)) b.classList.add("legal");
+      b.disabled = rift.over || (rift.mode === "solo" && rift.current === 2);
+      b.onclick = () => clickRift(i);
+      board.appendChild(b);
+    });
+    document.getElementById("riftTurn").textContent = Math.min(rift.turn, 20);
+    document.getElementById("riftStatus").textContent = rift.over ? "Match complete" : `${rift.current === 1 ? "Blue" : "Pink"}'s turn${rift.selected !== null ? " — choose destination" : " — choose a piece"}`;
+    document.getElementById("riftBlueScore").textContent = rift.board.filter(x => x === 1).length;
+    document.getElementById("riftPinkScore").textContent = rift.board.filter(x => x === 2).length;
+    const result = document.getElementById("riftResult");
+    if (rift.over) { result.hidden = false; const a = rift.board.filter(x=>x===1).length, b=rift.board.filter(x=>x===2).length; result.textContent = a===b ? `Draw! Both players control ${a} tiles. Try a different portal strategy.` : `${a>b?"Blue":"Pink"} wins with ${Math.max(a,b)} tiles. ${Math.min(a,b)} tiles for the other side — rematch and try a new route.`; }
+  }
+  function clickRift(i) {
+    if (rift.over) return;
+    if (rift.selected === null) {
+      if (rift.board[i] === rift.current) { rift.selected = i; drawRift(); }
+      return;
+    }
+    if (i === rift.selected) { rift.selected = null; drawRift(); return; }
+    if (legalRiftMoves(rift.selected, rift.current).includes(i)) {
+      rift.board[i] = rift.current; rift.selected = null; rift.turn++;
+      if (rift.turn > 20 || !rift.board.some((v, idx) => v === rift.current && legalRiftMoves(idx, rift.current).length)) rift.over = true;
+      else rift.current = rift.current === 1 ? 2 : 1;
+      drawRift();
+      if (!rift.over && rift.mode === "solo" && rift.current === 2) setTimeout(aiRiftMove, 350);
+    } else if (rift.board[i] === rift.current) { rift.selected = i; drawRift(); }
+  }
+  function aiRiftMove() {
+    if (!rift || rift.over || rift.current !== 2) return;
+    const options = [];
+    rift.board.forEach((v, i) => { if (v === 2) legalRiftMoves(i, 2).forEach(to => options.push({from:i,to,score:neighbors(to).filter(n=>rift.board[n]!==2).length + (to===0||to===4||to===20||to===24?1.4:0) + Math.random()*.3})); });
+    if (!options.length) { rift.over = true; drawRift(); return; }
+    options.sort((a,b)=>b.score-a.score); const move=options[0]; rift.board[move.to]=2; rift.turn++;
+    if (rift.turn>20) rift.over=true; else rift.current=1;
+    drawRift();
+  }
+
+  function happyMarkup() {
+    return `<p class="game-intro">Each round, both players secretly choose one action. Reveal together. Build points by balancing risk, energy, and a rotating hazard. In solo mode, the opponent is an AI and is clearly labelled.</p>
+      <div class="game-controls"><button class="control-button primary" id="happyMode">Mode: Local 2-player</button><button class="control-button" id="happyReset">New match</button></div>
+      <div class="status-bar"><span id="happyStatus">Round 1 — choose secretly</span><span>First to <strong>10</strong> points</span></div>
+      <div class="score-row"><div class="score-box"><span>Blue · You / Player 1</span><strong id="happyBlueScore">0</strong><span id="blueEnergy">Energy: 3</span></div><div class="score-box"><span id="pinkName">Pink · Player 2</span><strong id="happyPinkScore">0</strong><span id="pinkEnergy">Energy: 3</span></div></div>
+      <p class="game-note">Choose an action, then lock it in. In local mode, the first player's choice is hidden while the device is passed to Player 2.</p>
+      <div id="happyChoices" class="action-grid"></div><div class="game-controls"><button class="control-button primary" id="happyLock">Lock choice</button></div>
+      <div id="happyLog" class="result-log" hidden></div>`;
+  }
+  const actions = [
+    {id:"build",name:"Build",desc:"+2 points, steady",icon:"▦"},
+    {id:"dash",name:"Dash",desc:"+3 if hazard is calm",icon:"➜"},
+    {id:"prank",name:"Redirect",desc:"Counter Dash",icon:"↺"}
+  ];
+  let happy;
+  function happyStart(){return {round:1,score:[0,0],energy:[3,3],choices:[null,null],current:0,mode:"local",log:"",over:false};}
+  function initHappy(){
+    happy=happyStart();
+    document.getElementById("happyMode").onclick=()=>{happy.mode=happy.mode==="local"?"solo":"local";document.getElementById("happyMode").textContent=`Mode: ${happy.mode==="local"?"Local 2-player":"Solo vs AI"}`;document.getElementById("pinkName").textContent=happy.mode==="solo"?"Pink · AI opponent":"Pink · Player 2";drawHappy();};
+    document.getElementById("happyReset").onclick=initHappy;
+    document.getElementById("happyLock").onclick=lockHappy;
+    drawHappy();
+  }
+  function drawHappy(){
+    if(!document.getElementById("happyChoices"))return;
+    document.getElementById("happyBlueScore").textContent=happy.score[0];document.getElementById("happyPinkScore").textContent=happy.score[1];
+    document.getElementById("blueEnergy").textContent=`Energy: ${happy.energy[0]}`;document.getElementById("pinkEnergy").textContent=`Energy: ${happy.energy[1]}`;
+    document.getElementById("happyStatus").textContent=happy.over?"Match complete":`Round ${happy.round} — ${happy.mode==="local"&&happy.current===1?"Player 2, choose secretly":happy.current===0?"Player 1, choose secretly":"AI choosing…"}`;
+    const choices=document.getElementById("happyChoices");choices.innerHTML="";
+    actions.forEach(a=>{const b=document.createElement("button");b.className="action-choice"+(happy.choices[happy.current]===a.id?" selected":"");b.innerHTML=`<strong>${a.icon} ${a.name}</strong><span>${a.desc}</span>`;b.disabled=happy.over||(happy.mode==="solo"&&happy.current===1);b.onclick=()=>{happy.choices[happy.current]=a.id;drawHappy();};choices.appendChild(b);});
+    document.getElementById("happyLock").disabled=happy.over||!happy.choices[happy.current]||(happy.mode==="solo"&&happy.current===1);
+    document.getElementById("happyLock").textContent=happy.mode==="local"&&happy.current===0?"Lock & pass device":happy.mode==="local"?"Reveal choices":"Lock choice";
+    const log=document.getElementById("happyLog");log.hidden=!happy.log;log.textContent=happy.log;
+  }
+  function lockHappy(){
+    if(!happy.choices[happy.current])return;
+    if(happy.mode==="solo"&&happy.current===0){
+      const choices=["build","dash","prank"];happy.choices[1]=choices[Math.floor(Math.random()*choices.length)];resolveHappy();return;
+    }
+    if(happy.mode==="local"&&happy.current===0){happy.current=1;drawHappy();return;}
+    resolveHappy();
+  }
+  function resolveHappy(){
+    const [a,b]=happy.choices;
+    const hazard=happy.round%3===0?"wild":happy.round%2===0?"slippery":"calm";
+    const points=action=>{if(action==="build")return 2;if(action==="dash")return hazard==="calm"?3:hazard==="slippery"?1:2;if(action==="prank")return 1;return 0;};
+    let p0=points(a),p1=points(b),detail=`Hazard: ${hazard}. `;
+    if(a==="prank"&&b==="dash"){p0+=2;p1=0;detail+="Blue redirected Pink's dash. ";}
+    else if(b==="prank"&&a==="dash"){p1+=2;p0=0;detail+="Pink redirected Blue's dash. ";}
+    else if(a==="prank"&&b==="prank"){p0++;p1++;detail+="Both redirects collided harmlessly. ";}
+    happy.score[0]+=p0;happy.score[1]+=p1;happy.energy[0]=Math.min(5,happy.energy[0]+(a==="build"?1:0));happy.energy[1]=Math.min(5,happy.energy[1]+(b==="build"?1:0));
+    happy.log=`${detail}Blue chose ${a}; Pink chose ${b}. Round points: ${p0}–${p1}. ${p0===p1?"A tie — nobody gets roasted.":p0>p1?"Blue takes this round.":"Pink takes this round."}`;
+    happy.round++;happy.current=0;happy.choices=[null,null];
+    if(happy.score[0]>=10||happy.score[1]>=10||happy.round>7){happy.over=true;happy.log+=` Final score ${happy.score[0]}–${happy.score[1]}. ${happy.score[0]===happy.score[1]?"It's a draw!":happy.score[0]>happy.score[1]?"Blue wins.":"Pink wins."} Rematch to test another strategy.`;}
+    drawHappy();
+  }
+
+  // Tiny browser-console self-checks; no external dependencies.
+  window.MASTIVERSE = { version:"0.1", games:["Rift Realms","Happy Disaster"], runSelfChecks() {
+    const checks = [];
+    checks.push({name:"Rift board has 25 cells",pass:riftStart().board.length===25});
+    checks.push({name:"Rift start turn is player 1",pass:riftStart().current===1});
+    checks.push({name:"Happy starts with equal scores",pass:happyStart().score[0]===happyStart().score[1]});
+    checks.push({name:"Happy starts with 3 energy each",pass:happyStart().energy.every(x=>x===3)});
+    console.table(checks); return checks.every(x=>x.pass);
+  }};
+})();
+  </script>
+</body>
+</html>
